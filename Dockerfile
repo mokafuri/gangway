@@ -9,7 +9,7 @@ ENV GO111MODULE on
 RUN go mod verify
 RUN CGO_ENABLED=0 GOOS=linux go install -ldflags="-w -s" -v github.com/heptiolabs/gangway/...
 
-FROM debian:9.12-slim
+FROM debian:11-slim
 RUN apt-get update && apt-get install -y ca-certificates
 USER 1001:1001
 COPY --from=0 /go/bin/gangway /bin/gangway
