@@ -1,6 +1,6 @@
 module github.com/heptiolabs/gangway
 
-go 1.12
+go1.19.1
 
 require (
 	github.com/dgrijalva/jwt-go v3.1.0+incompatible
